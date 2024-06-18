@@ -34,7 +34,7 @@ public class send_notification_system {
                                 ", Employee_Master001 b" +
                         " WHERE a.sEmployNo = b.sEmployID" +
                                 " AND a.sProdctID = 'gRider'" +
-                                " AND a.sUserIDxx = 'GAP023000374'";
+                                " AND a.sUserIDxx IN ('GAP0190004', 'GAP021005790', 'GAP022004392', 'GAP022001908', 'GAP022004260', 'GAP023001024')";
         
         ResultSet loRS = instance.executeQuery(lsSQL);
         
@@ -47,21 +47,23 @@ public class send_notification_system {
                 rcpt.put("user",loRS.getString("sUserIDxx"));
                 rcpts.add(rcpt);
             }
-            
             SendRegularSystemNotification(rcpts, 
-                                         "Guanzon Circle Update", 
-                                                "KAY gandang araw!\n" +
-                                                "\n" +
-                                                "Maaari niyo ng i-download ang pinakabagong version ng Guanzon Circle sa google play. I-uninstall lamang ang inyong gamit na app ngayon, magpunta sa Google Play Store, hanapin ang Guanzon Circle at idownload para makuha ang mga bagong update ng ating app. Narito ang ilan sa mga pagbabago:\n" +
-                                                "\n" +
-                                                "1. Benta (Product Inquiry)\n" +
-                                                "2. Viewing of Terms and Conditions\n" +
-                                                "3. Downloading and viewing of Payslip\n" +
-                                                "4. Fix on data retention for payroll applications\n" +
-                                                "\n" +
-                                                "Guanzon Circle v3.17.058.071 s\n" +
-                                                "\n" +
-                                                "Maraming salamat po!");
+                                        "I Love My Job Mondays",
+                                         "Congratualations! You are entitled for 1 entry for todays raffle.");
+//            SendRegularSystemNotification(rcpts, 
+//                                         "Guanzon Circle Update", 
+//                                                "KAY gandang araw!\n" +
+//                                                "\n" +
+//                                                "Maaari niyo ng i-download ang pinakabagong version ng Guanzon Circle sa google play. I-uninstall lamang ang inyong gamit na app ngayon, magpunta sa Google Play Store, hanapin ang Guanzon Circle at idownload para makuha ang mga bagong update ng ating app. Narito ang ilan sa mga pagbabago:\n" +
+//                                                "\n" +
+//                                                "1. Benta (Product Inquiry)\n" +
+//                                                "2. Viewing of Terms and Conditions\n" +
+//                                                "3. Downloading and viewing of Payslip\n" +
+//                                                "4. Fix on data retention for payroll applications\n" +
+//                                                "\n" +
+//                                                "Guanzon Circle v3.17.058.071 s\n" +
+//                                                "\n" +
+//                                                "Maraming salamat po!");
         } catch (SQLException e) {
             System.err.println();
             System.exit(1);

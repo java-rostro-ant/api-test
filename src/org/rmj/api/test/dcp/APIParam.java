@@ -32,11 +32,11 @@ public class APIParam {
     }
     
     public static HashMap getHeader1(){
-        String clientid = "";
-        String productid = "GuanzonApp";
+        String clientid = "GGC_BM001";
+        String productid = "gRider";
         String imei = "GMC_SEG09";
         String user = "GAP0190004";
-        String log = "";
+        String log = "GAP024089411";
         String token = "";
         
         Calendar calendar = Calendar.getInstance();

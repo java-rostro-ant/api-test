@@ -1,35 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.rmj.api.test.integsys;
 
+import org.rmj.api.test.dcp.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.json.simple.JSONObject;
-import org.rmj.api.test.dcp.APIParam;
 import org.rmj.api.test.login.WebClient;
 
-/**
- *
- * @author user
- */
-public class testConfirmLeaveApplication {
+public class testSendLoanApplication {
     public static void main(String[] args) {
-        String sURL = "http://localhost/petmgr/confirm_leave_application.php";
+        String sURL = "http://localhost/petmgr/send_loan_application.php";
         
         Map<String, String> headers = APIParam.getHeader1();
         
         JSONObject param = new JSONObject();
-        param.put("sTransNox", "M00124001882");
-        param.put("dAppldFrx", "2024-06-03");
-        param.put("dAppldTox", "2024-06-03");
-        param.put("nWithPayx", 1);
-        param.put("nWithOPay", 0);
-        param.put("cTranStat", "1");
-        param.put("dApproved", "2024-06-15");
+        param.put("sEmployID", "M00111005387");
+        param.put("dTransact", "2024-06-03");
+        param.put("dLoanDate", "2024-06-03");
+        param.put("sLoanIDxx", "11003");
+        param.put("nLoanAmtx", 20000.00);
+        param.put("sPurposed", "test only");
         
         String response;
         try {
