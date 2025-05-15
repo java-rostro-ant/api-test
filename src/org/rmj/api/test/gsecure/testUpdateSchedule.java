@@ -15,18 +15,18 @@ public class testUpdateSchedule {
         Map<String, String> headers = APIParam.getHeader1();
        
         JSONObject param = new JSONObject();
-        param.put("sSchedIDx", "MX0124000006");
+        param.put("sSchedIDx", "MX0124000002");
                
         JSONArray array = new JSONArray();
         
         JSONObject detail = new JSONObject();
         detail.put("nSchedule", 1);
-        detail.put("dTimexxxx", "12-02-2023 12:00:00");
+        detail.put("dTimexxxx", "13:00:00");
         array.add(detail);
         
         detail = new JSONObject();
         detail.put("nSchedule", 2);
-        detail.put("dTimexxxx", "12-02-2023 4:00:00");
+        detail.put("dTimexxxx", "16:00:00");
         array.add(detail);
         
         param.put("sSchedule", array);

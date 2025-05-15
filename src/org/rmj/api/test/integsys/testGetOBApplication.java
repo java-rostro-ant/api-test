@@ -14,7 +14,7 @@ import org.rmj.api.test.login.WebClient;
 
 public class testGetOBApplication {
     public static void main(String[] args) {
-        String sURL = "https://restgk.guanzongroup.com.ph/petmgr/get_ob_application.php";
+        String sURL = "http://localhost/petmgr/get_ob_application.php";
         
         Map<String, String> headers = APIParam.getHeader1();
         

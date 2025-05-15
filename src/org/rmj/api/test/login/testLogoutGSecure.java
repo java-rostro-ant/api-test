@@ -13,7 +13,7 @@ import org.rmj.appdriver.SQLUtil;
 
 public class testLogoutGSecure {
     public static void main(String [] args){
-        String sURL = "https://restgk.guanzongroup.com.ph/gsecure/auth/logout.php";   
+        String sURL = "http://localhost/gsecure/auth/logout.php";   
         
         //Create the parameters needed by the API
         JSONObject param = new JSONObject();

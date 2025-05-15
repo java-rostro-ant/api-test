@@ -11,7 +11,7 @@ import org.rmj.api.test.login.WebClient;
 import org.rmj.appdriver.SQLUtil;
 import org.rmj.appdriver.agent.GRiderX;
 
-public class send_notification_system {
+public class send_notification_system_gconnect {
     public static void main(String [] args){
         String path;
         if(System.getProperty("os.name").toLowerCase().contains("win")){
@@ -29,54 +29,18 @@ public class send_notification_system {
             System.exit(1);
         }
         
-        String lsSQL = " SELECT a.sProdctID, a.sUserIDxx" +
-                        " FROM App_User_Master a" +
-                                ", Employee_Master001 b" +
-                        " WHERE a.sEmployNo = b.sEmployID" +
-                                " AND a.sProdctID = 'gRider'" +
-                                " AND a.sUserIDxx IN ('GAP0190004')";
-        
-        ResultSet loRS = instance.executeQuery(lsSQL);
-        
-        try {
             JSONArray rcpts = new JSONArray();
             JSONObject rcpt;
-            while (loRS.next()){
-                rcpt = new JSONObject();
-                rcpt.put("app", loRS.getString("sProdctID"));
-                rcpt.put("user",loRS.getString("sUserIDxx"));
-                rcpts.add(rcpt);
-            }
+            rcpt = new JSONObject();
+            rcpt.put("app", "GuanzonApp");
+            rcpt.put("user","GAP024002233");
+            rcpts.add(rcpt);
+            
             SendRegularSystemNotification(rcpts, 
-                                        "Mar 04, 2025 PASS CODE",
-                                         "MTC-5304 Guanzon Group\n" +
-                                            "G*-9186 is your Mar 04, 2025 PASS CODE. Thank you and be safe. Ref#: M00125087701");
-//            SendRegularSystemNotification(rcpts, 
-//                                         "Guanzon Circle Update", 
-//                                                "KAY gandang araw!\n" +
-//                                                "\n" +
-//                                                "Maaari niyo ng i-download ang pinakabagong version ng Guanzon Circle sa google play. I-uninstall lamang ang inyong gamit na app ngayon, magpunta sa Google Play Store, hanapin ang Guanzon Circle at idownload para makuha ang mga bagong update ng ating app. Narito ang ilan sa mga pagbabago:\n" +
-//                                                "\n" +
-//                                                "1. Benta (Product Inquiry)\n" +
-//                                                "2. Viewing of Terms and Conditions\n" +
-//                                                "3. Downloading and viewing of Payslip\n" +
-//                                                "4. Fix on data retention for payroll applications\n" +
-//                                                "\n" +
-//                                                "Guanzon Circle v3.17.058.071 s\n" +
-//                                                "\n" +
-//                                                "Maraming salamat po!");
-        } catch (SQLException e) {
-            System.err.println();
-            System.exit(1);
-        }
-     
-//        SendSystemPanaloRaffleNotification("GuanzonApp", 
-//                                    "GAP023000374", 
-//                                    "Raffle Promo!", 
-//                                    "Nanalo ka ng raffle entry para sa iyong pagbili ng motor noong Oct. 1, 2023. Ref no. 123456", 
-//                                    0);
+                                        "TEST NOTIFICATION",
+                                         "March 28, 2025");
     }
-    
+
     public static boolean SendRegularSystemNotification(String app,
                                                         String userid,
                                                         String title,
@@ -89,7 +53,7 @@ public class send_notification_system {
                     new HashMap<String, String>();
             headers.put("Accept", "application/json");
             headers.put("Content-Type", "application/json");
-            headers.put("g-api-id", "gRider");
+            headers.put("g-api-id", "GuanzonApp");
             headers.put("g-api-imei", "356060072281722");
             headers.put("g-api-key", SQLUtil.dateFormat(calendar.getTime(), "yyyyMMddHHmmss"));
             headers.put("g-api-hash", org.apache.commons.codec.digest.DigestUtils.md5Hex((String)headers.get("g-api-imei") + (String)headers.get("g-api-key")));
@@ -136,7 +100,7 @@ public class send_notification_system {
                     new HashMap<String, String>();
             headers.put("Accept", "application/json");
             headers.put("Content-Type", "application/json");
-            headers.put("g-api-id", "gRider");
+            headers.put("g-api-id", "GuanzonApp");
             headers.put("g-api-imei", "356060072281722");
             headers.put("g-api-key", SQLUtil.dateFormat(calendar.getTime(), "yyyyMMddHHmmss"));
             headers.put("g-api-hash", org.apache.commons.codec.digest.DigestUtils.md5Hex((String)headers.get("g-api-imei") + (String)headers.get("g-api-key")));
@@ -189,7 +153,7 @@ public class send_notification_system {
                     new HashMap<String, String>();
             headers.put("Accept", "application/json");
             headers.put("Content-Type", "application/json");
-            headers.put("g-api-id", "IntegSys");
+            headers.put("g-api-id", "GuanzonApp");
             headers.put("g-api-imei", "356060072281722");
             headers.put("g-api-key", SQLUtil.dateFormat(calendar.getTime(), "yyyyMMddHHmmss"));
             headers.put("g-api-hash", org.apache.commons.codec.digest.DigestUtils.md5Hex((String)headers.get("g-api-imei") + (String)headers.get("g-api-key")));
@@ -256,7 +220,7 @@ public class send_notification_system {
                     new HashMap<String, String>();
             headers.put("Accept", "application/json");
             headers.put("Content-Type", "application/json");
-            headers.put("g-api-id", "IntegSys");
+            headers.put("g-api-id", "GuanzonApp");
             headers.put("g-api-imei", "356060072281722");
             headers.put("g-api-key", SQLUtil.dateFormat(calendar.getTime(), "yyyyMMddHHmmss"));
             headers.put("g-api-hash", org.apache.commons.codec.digest.DigestUtils.md5Hex((String)headers.get("g-api-imei") + (String)headers.get("g-api-key")));

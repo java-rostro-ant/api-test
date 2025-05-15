@@ -12,7 +12,7 @@ import org.rmj.appdriver.SQLUtil;
 
 public class testLoginLocal {
     public static void main(String [] args){
-        String sURL = "https://restgk.guanzongroup.com.ph/security/mlogin.php";
+        String sURL = "http://localhost/security/mlogin.php";
         
         String clientid = "";
         String productid = "gRider";
@@ -37,8 +37,8 @@ public class testLoginLocal {
         
 
         JSONObject param = new JSONObject();
-        param.put("user", "michael_cuison07@yahoo.com");
-        param.put("pswd", "abcdefg");
+        param.put("user", "arnoldlguillen@yahoo.com.ph");
+        param.put("pswd", "arnold@102619");
         
         JSONParser oParser = new JSONParser();
         JSONObject json_obj = null;

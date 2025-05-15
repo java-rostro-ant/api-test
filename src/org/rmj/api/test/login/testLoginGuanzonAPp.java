@@ -12,7 +12,7 @@ import org.rmj.appdriver.SQLUtil;
 
 public class testLoginGuanzonAPp {
     public static void main(String [] args){
-        String sURL = "http://192.168.10.64/security/signin.php";
+        String sURL = "https://restgk.guanzongroup.com.ph/security/signin.php";
         
         String clientid = "GGC_BM001";
         String productid = "GuanzonApp";

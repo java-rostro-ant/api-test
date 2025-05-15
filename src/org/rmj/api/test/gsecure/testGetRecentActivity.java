@@ -12,7 +12,7 @@ public class testGetRecentActivity {
     public static void main(String[] args) {
         String sURL = "http://localhost/gsecure/patrol/get_recent_activity.php";
         
-        Map<String, String> headers = APIParam.getHeader1();
+        Map<String, String> headers = APIParam.getHeaderGSecure();
        
         JSONArray array = new JSONArray();
         

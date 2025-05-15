@@ -1,24 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package org.rmj.api.test.integsys;
+package org.rmj.api.test.gcircle;
 
-import org.rmj.api.test.dcp.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.json.simple.JSONObject;
+import org.rmj.api.test.dcp.APIParam;
 import org.rmj.api.test.login.WebClient;
 
-public class testGetLeaveApplication {
+public class testDownloadSCA {
     public static void main(String[] args) {
-        String sURL = "http://localhost/petmgr/get_leave_application.php";
+        String sURL = "http://localhost/integsys/param/download_sca_request.php";
         
         Map<String, String> headers = APIParam.getHeader1();
         
-        JSONObject param = new JSONObject();
+        JSONObject param = new JSONObject();        
+        param.put("descript", "all");
+        param.put("timestamp", "2024-07-15 12:00:00");
         
         String response;
         try {
@@ -34,4 +31,3 @@ public class testGetLeaveApplication {
         }
     }
 }
-

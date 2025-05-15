@@ -27,11 +27,14 @@
             <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/login/testLoginGuanzonAPp.java</file>
             <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/login/testSignUp.java</file>
         </group>
-        <group name="Utilities"/>
-        <group name="GCARD">
-            <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/login/testLoginLocal.java</file>
-            <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/integsys/testConfirmLeaveApplication.java</file>
+        <group name="GCARD"/>
+        <group name="Engineering">
+            <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/desktop/testRequestEmployee.java</file>
             <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/dcp/APIParam.java</file>
+            <file>file:/D:/Guanzon/GMC%20SEG%20Folder%20-%20Java/api-test/src/org/rmj/api/test/integsys/testGetLeaveApplication.java</file>
         </group>
+        <group name="Branch - GCard"/>
+        <group name="Utilities"/>
+        <group name="CAS - Mac"/>
     </open-files>
 </project-private>

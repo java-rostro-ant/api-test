@@ -17,7 +17,7 @@ public class testRequestVisit {
         param.put("sUserIDxx", "MX0123000001");
         param.put("sWHouseID", "001");
         param.put("sNFCIDxxx", "0001");
-        param.put("dTimexxxx", "2024-01-02 12:00:00");
+        param.put("dTimexxxx", "2024-08-21 13:00:00");
         param.put("sRemarksx", "Test request");
         
         String response;

@@ -37,7 +37,7 @@ public class send_notification {
         JSONArray rcpts = new JSONArray();
         JSONObject rcpt = new JSONObject();
         rcpt.put("app", "GuanzonApp");
-        rcpt.put("user", "GAP0190004");
+        rcpt.put("user", "GAP024002233");
         rcpts.add(rcpt);
         
         for(int x = 0; x < 1; x++){

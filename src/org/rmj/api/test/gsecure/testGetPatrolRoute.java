@@ -14,7 +14,7 @@ public class testGetPatrolRoute {
         Map<String, String> headers = APIParam.getHeaderGSecure();
        
         JSONObject param = new JSONObject();
-        param.put("sUserIDxx", "MX0123000001");
+        param.put("sUserIDxx", "MX0125000001");
         
         String response;
         try {

@@ -10,7 +10,7 @@ public class APIParam {
         String clientid = "GGC_BM001";
         String productid = "gRider";
         String imei = "GMC_SEG09";
-        String user = "GAP0190004";
+        String user = "MX0125000001";
         
         Calendar calendar = Calendar.getInstance();
         Map<String, String> headers = 
@@ -25,7 +25,7 @@ public class APIParam {
         headers.put("g-api-hash", org.apache.commons.codec.digest.DigestUtils.md5Hex((String)headers.get("g-api-imei") + (String)headers.get("g-api-key")));
         headers.put("g-api-client", clientid);    
         headers.put("g-api-user", user);    
-        headers.put("g-api-log", "GAP024053574");    
+        headers.put("g-api-log", "GAP025000007");    
         headers.put("g-api-token", "TEST API TOKEN ONLY FOR MAC LAPTOP"); 
         
         return (HashMap) headers;
@@ -35,8 +35,8 @@ public class APIParam {
         String clientid = "GGC_BM001";
         String productid = "gRider";
         String imei = "GMC_SEG09";
-        String user = "GAP0190004";
-        String log = "GAP024089411";
+        String user = "GAP022002117";
+        String log = "GAP025035090";
         String token = "";
         
         Calendar calendar = Calendar.getInstance();
@@ -60,8 +60,8 @@ public class APIParam {
     }
     
     public static HashMap getHeader2(){
-        String clientid = "GGC_BM002";
-        String productid = "IntegSys";
+        String clientid = "GGC_BM001";
+        String productid = "gRider";
         String imei = "GMC_SEG09";
         String user = "M001111122";
         String log = "";

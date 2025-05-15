@@ -1,26 +1,20 @@
 package org.rmj.api.test.login;
 
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.rmj.api.test.dcp.APIParam;
-import org.rmj.appdriver.SQLUtil;
 
 public class testLoginGSecure {
     public static void main(String [] args){
-        String sURL = "https://restgk.guanzongroup.com.ph/gsecure/auth/login_mpin.php";
-
+        String sURL = "http://localhost/gsecure/auth/login_mpin.php";   
+        
         //Create the parameters needed by the API
         JSONObject param = new JSONObject();
-        param.put("mpin", "322034");
-
-        JSONParser oParser = new JSONParser();
-        JSONObject json_obj = null;
+        param.put("mpin", "912191");
+        param.put("vrsnNumber", "123");
         
         String response;
         try {
@@ -32,7 +26,7 @@ public class testLoginGSecure {
             
             System.out.println(response);
         } catch (IOException ex) {
-            Logger.getLogger(testLoginGSecure.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(testLogoutGSecure.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
